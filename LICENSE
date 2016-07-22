@@ -1,0 +1,118 @@
+<?php
+ 
+//do_action( 'woocommerce_order_item_' . $item['type'] . '_html', $item_id, $item, $order );
+add_action('woocommerce_order_item_line_item_html' , 'objects_subscription_order_data',10,2);
+/**
+ * @author Mohammad Mursaleen
+ * function to add extra info in order window
+ * @param $item_id
+ * @param $item
+ */
+function objects_subscription_order_data( $item_id, $item ){
+ 
+    $product_id = $item['item_meta']['_product_id'][0];
+    $product = get_product( $product_id );
+ 
+    if( $product->product_type != 'subscription' )
+        return false;
+ 
+    $products_data = get_post_meta( $product_id , 'subscription_product_data' , true );
+ 
+    if($products_data){
+    ?>
+    <tr class="item Zero Rate" data-order_item_id="7">
+        <td class="check-column">
+        </td>
+        <td class="thumb">
+        </td>
+        <td class="name" data-sort-value="Subscription Per week">
+        <?php
+ 
+        $display_html = '<h3>Subscription Products Details</h3>';
+ 
+        $display_html .= '<div style="margin-left: 20px;">';
+ 
+        foreach($products_data as $product_data){
+ 
+            if($product_data){
+ 
+                $display_html .=  '(#'.$product_data['product_id'].') - <b>'. get_the_title(  $product_data['product_id'] ) .  '</b> &times; ' . $product_data['product_qty'] . '<br>' ;
+
+                if( !empty($product_data['variation_id']) )
+                    $display_html .= objects_get_product_variations( $product_data['variation_id'] , true );
+ 
+            }
+ 
+        }
+ 
+        $display_html .= '</div>';
+ 
+        echo $display_html . '<br><br>';
+ 
+        ?>
+        </td>
+    </tr>
+<?php
+    }
+ 
+ 
+}
+ 
+/**
+ * @author Mohammad Mursaleen
+ * function to get affliate name by order id
+ * @param $order_id
+ * @return string
+ */
+function objects_get_afilliate_name($order_id){
+    global $wpdb;
+ 
+    if( !$order_id )
+        return 'No Affliate';
+ 
+    $affliate_id = $wpdb->get_var( "SELECT `affiliate_id` FROM `wp_affiliate_wp_referrals` WHERE `reference` = '".$order_id ."'");
+ 
+    if($affliate_id){
+ 
+        $user_info = get_userdata($affliate_id);
+        return '<b>'.$user_info->nickname.'<br>';
+ 
+    } else {
+ 
+        return 'No Affliate';
+ 
+    }
+ 
+}
+ 
+add_filter( 'parse_query', 'objects_admin_products_filter' );
+/**
+ * function to remove subscription products from products until user tries to filter them using search
+ * @author Mohammad Mursaleen
+ * @return Void
+ */
+function objects_admin_products_filter( $q ){
+ 
+    if( isset($_GET['product_type']) && $_GET['product_type'] == 'subscription' )
+        return false;
+ 
+    $type = 'product';
+ 
+    if (isset($_GET['post_type'])) {
+        $type = $_GET['post_type'];
+    }
+ 
+    if ( 'product' == $type && is_admin() ){
+ 
+        $q->set( 'tax_query', array(array(
+            'taxonomy' => 'product_type',
+            'field' => 'slug',
+            'terms' => array( 'subscription' ), // Don't display products in the knives category on the shop page
+            'operator' => 'NOT IN'
+        )));
+ 
+    }
+ 
+    remove_filter( 'parse_query', 'objects_admin_products_filter' );
+ 
+}
