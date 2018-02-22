@@ -40,8 +40,8 @@ Set things according to your requirement and you are done.
 
 **1.2**
 
--Compatible with WordPress 4.9.2.
--Compatible with WooCommerce 3.2.6.
+- Compatible with WordPress 4.9.2.
+- Compatible with WooCommerce 3.2.6.
 
 **1.0**
 
