@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Woo Add Custom Fee
- * Plugin URI: https://wooexpert.com/
+ * Plugin URI: https://wpexperts.io
  * Description: A simple plugin to add custom fee at your cart
- * Author: Wooexpert
- * Author URI: http://wooexpert.com/
- * Version: 1.0
+ * Author: wpexpertsio
+ * Author URI: https://wpexperts.io
+ * Version: 1.2
  * Text Domain: wacf
  */
 

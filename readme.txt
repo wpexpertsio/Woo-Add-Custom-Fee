@@ -1,10 +1,10 @@
-=== Woo Add Custom Fee ===
-Contributors: wooexpert,wpexpertsio
+=== WooCommerce Add Custom Fee ===
+Contributors: wpexpertsio
 Tags: Woocommerce, custom fee, additional fee, cart fee, extra fee, Woocommerce fee
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=pay@objects.ws&item_name=Donation For Plugin
 Requires at least: 4.0
-Tested up to: 4.4.2
-Stable tag: 1.0
+Tested up to: 4.9.2
+Stable tag: 1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Simply Adds Custom/Additional Fee In Woocommerce Cart
 == Description ==
 This plugins helps admin to add some additional fee to Woocommerce cart. You can add your custom amount and label for the fee to be added in cart. Also can add tax and change tax class if you want. It also provides a feature to apply custom fee only if cart total is greater then minimum amount set.
 
-[youtube https://www.youtube.com/watch?v=Itt4LTQESaM]
+[youtube https://www.youtube.com/watch?v=AxIwrP2FMJM]
 
 = Features: =
 - Add custom fee to what ever amount you want.
@@ -24,6 +24,8 @@ This plugins helps admin to add some additional fee to Woocommerce cart. You can
 - You can set minimum cart amount after which you would like to apply Custom Fee.
 
 
+**Interested in contributing to Woo Add Custom Fee?**	
+Head over to the [Woo Add Custom Fee **GitHub Repository**](https://github.com/wpexpertsio/Woo-Add-Custom-Fee) to find out how you can pitch in ;)
 
 == Installation ==
 To add a WordPress Plugin using the built-in plugin installer:
@@ -47,6 +49,13 @@ Set things according to your requirement and you are done.
 2. Additional Fee displayed in cart using Woo Add Custom Fee plugin.
 
 == Changelog ==
+= 1.2 =
+- Compatible with WordPress 4.9.2
+- Compatible with WooCommerce 3.2.6
+
+= 1.1 =
+- WooCommerce 3.0+ Compatibility
+
 = 1.0 =
 - Initial release.
 
