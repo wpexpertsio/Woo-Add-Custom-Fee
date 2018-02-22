@@ -39,10 +39,12 @@ Set things according to your requirement and you are done.
 ### Changelog
 
 **1.2**
--Compatible with WordPress 4.9.2
--Compatible with WooCommerce 3.2.6
+
+-Compatible with WordPress 4.9.2.
+-Compatible with WooCommerce 3.2.6.
 
 **1.0**
+
 - Initial release.
 
 ## Upgrade Notice
