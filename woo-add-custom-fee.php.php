@@ -5,7 +5,7 @@
  * Description: A simple plugin to add custom fee at your cart
  * Author: wpexpertsio
  * Author URI: https://wpexperts.io
- * Version: 1.2
+ * Version: 1.3
  * Text Domain: wacf
  */
 

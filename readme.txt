@@ -4,7 +4,7 @@ Tags: Woocommerce, custom fee, additional fee, cart fee, extra fee, Woocommerce 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=pay@objects.ws&item_name=Donation For Plugin
 Requires at least: 4.0
 Tested up to: 4.9.2
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,11 @@ Set things according to your requirement and you are done.
 2. Additional Fee displayed in cart using Woo Add Custom Fee plugin.
 
 == Changelog ==
+= 1.3 =
+- New : Added new field to enable/disable Minimum threshold
+- New : Added new field to enable/disable Maximum threshold
+- New : Added new field to manage Maximum threshold amount
+
 = 1.2 =
 - Compatible with WordPress 4.9.2
 - Compatible with WooCommerce 3.2.6

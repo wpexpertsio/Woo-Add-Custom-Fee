@@ -60,7 +60,7 @@ class WACF_Settings {
             ),
 
             'enable' => array(
-                'name'     => __( 'Enable', 'wacf' ),
+                'name'     => __( 'Enable ', 'wacf' ),
                 'type' => 'checkbox',
                 'desc'     => __( '', 'wacf' ),
                 'id'       => 'wacf_enable',
@@ -104,12 +104,32 @@ class WACF_Settings {
                 'desc_tip' => true,
                 'options'  => self::get_tax_options(),
             ),
-
+            'enable_min' => array(
+                'name'     => __( 'Use Minimum threshold value ', 'wacf' ),
+                'type' => 'checkbox',
+                'desc'     => __( '', 'wacf' ),
+                'id'       => 'wacf_enable_min',
+                'desc_tip' => true,
+            ),
             'minimum' => array(
                 'name'     => __( 'Minimum Cart Amount', 'wacf' ),
                 'type' => 'text',
                 'desc'     => __( 'Set Minimum total cart amount on which you would like to apply Custom Fee', 'wacf' ),
                 'id'       => 'wacf_minimum',
+                'desc_tip' => true,
+            ),
+            'enable_max' => array(
+                'name'     => __( 'Use Maximum threshold value ', 'wacf' ),
+                'type' => 'checkbox',
+                'desc'     => __( '', 'wacf' ),
+                'id'       => 'wacf_enable_max',
+                'desc_tip' => true,
+            ),
+            'maximum' => array(
+                'name'     => __( 'Maximum  Cart Amount', 'wacf' ),
+                'type' => 'text',
+                'desc'     => __( 'Set Maximum total cart amount on which you would like to apply Custom Fee', 'wacf' ),
+                'id'       => 'wacf_maximum',
                 'desc_tip' => true,
             ),
 
