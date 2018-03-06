@@ -38,6 +38,12 @@ Set things according to your requirement and you are done.
 
 ### Changelog
 
+**1.3**
+
+- New : Added new field to enable/disable Minimum threshold
+- New : Added new field to enable/disable Maximum threshold
+- New : Added new field to manage Maximum threshold amount
+
 **1.2**
 
 - Compatible with WordPress 4.9.2.
